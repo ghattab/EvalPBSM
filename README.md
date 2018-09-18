@@ -38,5 +38,9 @@ Each obtained mesh has a different quality, as calculated using the following me
 
 
 ## Optimization schemes (OPTIM)
+We employ three optimization schemes: netgen, gmsh, coupled.
+The coupled comprises both the netgen and gmsh optimizations.
 
-## 
+## Partial target surfaces
+Two different bisections are investigated: (1). the surface of the _in silico_ liver was first bisected in the xy, xz, and yz planes, respectively. (2). bisect the three results of (1) along the normal to each of the aforementioned planes obtaining hemi-xy, hemi-xz, and hemi-yz.  
+
