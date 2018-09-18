@@ -1,4 +1,3 @@
-# Non rigid registration
 This repository contains results from using the physics-based shape matching or PBSM algorithm on ground truth _in silico_ and _in vitro_ liver models, respectively.
 
 To find out what has the greatest impact on performance, we investigated deformation results using a combination of scenarios: four different tetrahedral meshing algorithms (TETMSH), three different optimization schemes (OPTIM), and six partial target surfaces (bisected from a full Delaunay triangulation). 
