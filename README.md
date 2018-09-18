@@ -10,9 +10,9 @@ Based on previously published and ground-truth data, we employ the first liver f
 For the scope of this work, we used four TETMSH algorithms: the Delaunay triangulation (DLNY), the Frontal algorithm (FRNTL), the coupled Frontal Delaunay algorithm (FRNTL-DLNY), and the implicit domain mesher (MMG3D). Most of them rely on Tetgen and Netgen algorithms; although both algorithms are characterized as being unstructured algorithms, the created volumes are comparable and are suitable for finite element or FE and finite volume methods. To obtain high quality meshes, we use Gmsh since it provides refinement and/or optimization options.
 
 Each obtained mesh has a different quality, as calculated using the following metrics:
-* ETA = volume^(2/3)/sum_edge_length^(2)
-* GAMMA = inscribed_radius/circumscribed_radius
-* RHO = min_edge_length/max_edge_length
+* `ETA = volume^(2/3)/sum_edge_length^(2)`
+* `GAMMA = inscribed_radius/circumscribed_radius`
+* `RHO = min_edge_length/max_edge_length`
 
 | TETMSH     	| OPTIM   	| ETA    	| GAMMA  	| RHO    	|
 |------------	|---------	|--------	|--------	|--------	|
@@ -28,6 +28,14 @@ Each obtained mesh has a different quality, as calculated using the following me
 | FRNTL-DLNY 	| gmsh    	| 0.5361 	| 0.4193 	| 0.4029 	|
 | FRNTL      	| gmsh    	| 0.758  	| 0.6203 	| 0.5424 	|
 | MMG3D      	| gmsh    	| 0.7545 	| 0.6171 	| 0.5391 	|
+
+
+| METRIC 	| MEAN   	| VAR    	|
+|--------	|--------	|--------	|
+| ETA    	| 0.5781 	| 0.0056 	|
+| GAMMA  	| 0.6465 	| 0.0080 	|
+| RHO    	| 0.7811 	| 0.0086 	|
+
 
 ## Optimization schemes (OPTIM)
 
