@@ -41,5 +41,11 @@ We employ three optimization schemes: netgen, gmsh, coupled.
 The coupled comprises both the netgen and gmsh optimizations.
 
 ## Partial target surfaces
-Two different bisections are investigated: (1). the surface of the _in silico_ liver was first bisected in the xy, xz, and yz planes, respectively. (2). bisect the three results of (1) along the normal to each of the aforementioned planes obtaining hemi-xy, hemi-xz, and hemi-yz.  
+Two different bisections are investigated: (1). the surface of the _in silico_ liver was first bisected in the xy, xz, and yz planes, respectively. (2). bisect the three results of (1) along the normal to each of the aforementioned planes obtaining 3 hemi-surfaces.  
+
+## Evaluation
+Following an evaluation pipeline, once registered the surface mesh is extracted.
+It is then voxelized using [Binvox](https://www.patrickmin.com/binvox/) creating a grid size of 1024^3.
+The voxelized volumes are compared against the full surface registration using [Visceral](https://github.com/Visceral-Project/EvaluateSegmentation).
+All results are reported in the `res` folders in the respective settings (either _in silico_ or _in vitro_).
 
