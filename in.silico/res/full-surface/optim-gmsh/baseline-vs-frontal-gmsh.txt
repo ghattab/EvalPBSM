@@ -1,0 +1,38 @@
+Similarity:
+DICE	= 0.993359	Dice Coefficient (F1-Measure) 
+JACRD	= 0.986806	Jaccard Coefficient 
+AUC	= 0.995235	Area under ROC Curve 
+KAPPA	= 0.990505	Cohen Kappa 
+RNDIND	= 0.992046	Rand Index 
+ADJRIND	= 0.983680	Adjusted Rand Index 
+ICCORR	= 0.993344	Interclass Correlation 
+VOLSMTY	= 0.999939	Volumetric Similarity Coefficient 
+MUTINF	= 0.845011	Mutual Information 
+
+Distance:
+HDRFDST	= 21.377558	Hausdorff Distance (in voxel)
+AVGDIST	= 0.015152	Average Hausdorff Distance (in voxel)
+MAHLNBS	= 0.008602	Mahanabolis Distance 
+VARINFO	= 0.074130	Variation of Information 
+GCOERR	= 0.007967	Global Consistency Error 
+PROBDST	= 0.000026	Probabilistic Distance 
+
+Classic Measures:
+SNSVTY	= 0.993299	Sensitivity (Recall, true positive rate) 
+SPCFTY	= 0.997171	Specificity (true negative rate) 
+PRCISON	= 0.993420	Precision (Confidence) 
+FMEASR	= 0.993359	F-Measure 
+ACURCY	= 0.996007	Accuracy 
+FALLOUT	= 0.002829	Fallout (false positive rate) 
+TP	= 320670212	true positive (in voxel)
+FP	= 2124019	false positive (in voxel)
+TN	= 748784209	true negative (in voxel)
+FN	= 2163384	false negative (in voxel)
+REFVOL	= 322833596	reference volume (in voxel)
+SEGVOL	= 322794231	segmented volume (in voxel)
+
+Total execution time= 1068494 milliseconds
+
+
+  ---** VISCERAL 2013, www.visceral.eu **---
+
