@@ -45,7 +45,9 @@ The coupled comprises both the netgen and gmsh optimizations.
 Two different bisections are investigated: (1). the surface of the _in silico_ liver was first bisected in the xy, xz, and yz planes, respectively. (2). bisect the three results of (1) along the normal to each of the aforementioned planes obtaining 3 hemi-surfaces.  
 
 ## PBSM approach
-The employed PBSM approach is a SOFA based implementation of the PBSM approach and relies on the Medical Simulation Markup Language (MSML).
+The employed PBSM approach is a SOFA based implementation of the PBSM approach.
+The implementation uses the Medical Simulation Markup Language (MSML) and is available as a docker container.
+
 ### Install docker container
 The PBSM approach used for the evaluation is available as a Docker [container](https://github.com/ssuwelack/msml-docker-runtime).
 1. Install the Docker framework for your Linux distribution. Further details can be found on the Docker homepage. For Ubuntu Linux there is the possibility to use either [pre-configured](www.ubuntuupdates.org/ppa/docker) packages or run a [manual](http://docs.docker. com/installation/ubuntulinux/) installation
