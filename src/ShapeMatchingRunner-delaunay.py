@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 
 
 # define charge
-# test: 1000, 10, 2500, 5000
 charge="10"
 
 # define pathes and files
@@ -26,36 +25,3 @@ myRunner.update_variable('msml_mesh_shape', msml_mesh_shape)
 #myRunner.update_variable('msml_mesh_shape_ref', msml_mesh_shape_reference)
 myRunner.update_variable('chargeNum', charge)
 myRunner.run()
-
-# compare meshes
-#errorVec = myRunner.get_results('compMesh', 'errorVec')
-#dispVec = myRunner.get_results('compMeshDisp', 'errorVec')
-
-#print "Checking for vector lengths ..."
-#print len(errorVec)
-#print len(dispVec)
-
-# plotting
-#fig1, ax1 = plt.subplots(figsize=(10,6))
-#bp1 = plt.boxplot(errorVec)
-#ax1.set_ylabel('Error [mm]')
-#plt.xticks( [1], ['Deformation Error'] )
-
-#plt.savefig("def.pdf")
-
-#fig2, ax2 = plt.subplots(figsize=(10,6))
-#bp2 = plt.boxplot(dispVec)
-#ax2.set_ylabel('Error [mm]')
-#plt.xticks( [1], ['Displacement'] )
-
-#plt.show()
-#plt.savefig("dis.pdf")
-
-
-#f = open("def.txt", "w+")
-#f.write(str(errorVec))
-#f.close()
-
-#f = open("dis.txt", "w+")
-#f.write(str(dispVec))
-#f.close()
