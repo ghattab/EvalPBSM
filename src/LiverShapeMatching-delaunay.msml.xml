@@ -44,11 +44,6 @@
     <workflow>
                <ComputeIndicesFromBoxROI id="bodyToIndexGroup" box="60 60 30 273 273 223" mesh="${vol_mesh}"
                                select="points"/>
-    <!--
-                <ComputeMeanError id="meanError" initialMesh="${vol_mesh}" referenceMesh="${msml_mesh_shape_ref}" testMesh="${disp}" />
-                <CompareMeshes id="compMesh" referenceMesh="${msml_mesh_shape_ref}" testMesh="${disp}" surfaceOnly="false" />
-                <CompareMeshes id="compMeshDisp" referenceMesh="${msml_mesh_shape_ref}" testMesh="${vol_mesh}" surfaceOnly="false" />
-    -->
     </workflow>
 
 
