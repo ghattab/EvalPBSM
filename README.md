@@ -50,8 +50,8 @@ The implementation uses the Medical Simulation Markup Language (MSML) and is ava
 
 ### Install docker container
 The PBSM approach used for the evaluation is available as a Docker [container](https://github.com/ssuwelack/msml-docker-runtime).
-1. Install the Docker framework for your Linux distribution. Further details can be found on the Docker homepage. For Ubuntu Linux there is the possibility to use either [pre-configured](www.ubuntuupdates.org/ppa/docker) packages or run a [manual](http://docs.docker. com/installation/ubuntulinux/) installation
-2. To avoid the use of `sudo` in front of the docker commands grant access to a user using: `$ sudo usermod −aG docker username` (Log out for the changes to take effect)
+1. Install the Docker framework for your Linux distribution. Further details can be found on the Docker homepage. For Ubuntu Linux there is the possibility to use either [pre-configured](www.ubuntuupdates.org/ppa/docker) packages or run a [manual](http://docs.docker.com/installation/ubuntulinux/) installation
+2. To avoid the use of `sudo` in front of the docker commands, you may grant access to a user using: `$ sudo usermod −aG docker username` (Log out for the changes to take effect)
 3. Pull the SOFA container from the Docker Hub using: `$ docker pull ssuwelack/msml_sofa` or clone it from Github using `$ git clone https://github.com/ssuwelack/msml−docker−runtime.git`.
 
 ### Run container
@@ -60,7 +60,7 @@ Either start an SSH server inside the container and connect to it, or link the h
 Both start-up procedures are available as shell scripts from the aforementioned Github repository, e.g. `$ ./ run_msml_sofa . sh`.
 When prompted for a user and password, use `msml` for both.
 For linux clients, you may also run the container as a server and connect to it with an instance using `$ ssh −XC msml@servername −p portnumber`.
-The recommended approach is communicating over SSH. It is described in five steps:
+The recommended approach is communicating over SSH. It is described in four steps:
 1. `$ docker run −d −p 127.0.0.1:22000:22 −−name msml_sofa ssuwelack/msml_sofa/root/start_ssh.sh`
 2. `$ ./ start_ssh_msml_sofa.sh`
 3. `$ ssh −XC msml@localhost −p 22000` (alternative usage using the user/pwd msml)
@@ -85,5 +85,5 @@ Example run:
 The voxelized volumes are compared against the full surface registration using [Visceral](https://github.com/Visceral-Project/EvaluateSegmentation).
 Example run: `./EvaluateGrids path-to-deformed-ground-truth-voxelized-vtk-file path-to-deformed-test-voxelized-vtk-file -use qll -unit millimiter/voxel > output-path.txt` 
 Both executables are reported in the source folder `src`.
-All results are reported in the `res` folders in the respective setting (either _in silico_ or _in vitro_).
+All results are reported in the `res` folder in each setting (either _in silico_ or _in vitro_).
 
