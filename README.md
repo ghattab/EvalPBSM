@@ -1,5 +1,5 @@
 # Evaluation Physics Based Shape Matching (PBSM) approach
-This repository contains data, source, and results from using the physics-based shape matching or PBSM algorithm on ground truth _in silico_ and _in vitro_ liver models, respectively.
+This repository contains data, source, and results from using the physics-based shape matching or PBSM algorithm on ground truth _in silico_ and experimental phantom liver models, respectively.
 
 To find out what has the greatest impact on performance, we investigated deformation results using a combination of scenarios: four different tetrahedral meshing algorithms (TETMSH), three different optimization schemes (OPTIM), and six partial target surfaces (bisected from a full Delaunay triangulation). 
 
@@ -85,5 +85,5 @@ Example run:
 The voxelized volumes are compared against the full surface registration using [Visceral](https://github.com/Visceral-Project/EvaluateSegmentation).
 Example run: `./EvaluateGrids path-to-deformed-ground-truth-voxelized-vtk-file path-to-deformed-test-voxelized-vtk-file -use qll -unit millimiter/voxel > output-path.txt` 
 Both executables are reported in the source folder `src`.
-All results are reported in the `res` folder in each setting (either _in silico_ or _in vitro_).
+All results are reported in the `res` folder in each setting (either _in silico_ or phantom experiment).
 
