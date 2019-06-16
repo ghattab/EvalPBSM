@@ -1,5 +1,5 @@
 # Evaluation Physics Based Shape Matching (PBSM) approach
-This repository contains data, source, and results from using the physics-based shape matching or PBSM algorithm on ground truth _in silico_ and experimental phantom liver models, respectively.
+This repository contains data, source, and results from using the physics-based shape matching or PBSM algorithm on three different experiments.
 
 ## Data
 Suwelack S, Röhl S, Bodenstedt S, Reichard D, Dillmann R, Santos T, Maier‐Hein L, Wagner M, Wünscher J, Kenngott H, Müller BP. Physics‐based shape matching for intraoperative image guidance. Medical physics. 2014 Nov 1;41(11). [Data](http://opencas.webarchiv.kit.edu/?q=PhysicsBasedShapeMatching "Download link") from the Open-CAS: Validating and Benchmarking Computer Assisted Surgery.

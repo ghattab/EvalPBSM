@@ -1,0 +1,68 @@
+<msml:msml xmlns:msml="http://sfb125.de/msml"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://sfb125.de/msml">
+    <variables>
+        <var name="vol_mesh" value="InitialLowResolutionVolumeModel.vtk" logical="TriangularSurface"
+             physical="file.vtk"/>
+        <var name="msml_mesh_shape" value="12.stl" />
+        <!--        <var name="msml_mesh_shape_ref" value="InitialLowResolutionVolumeModelSurface.vtk" /> -->
+        <var name="chargeNum" value="500" />
+    </variables>
+
+
+    <scene>
+        <object id="liver">
+            <mesh>
+                <linearTet id="liver" mesh="${vol_mesh}"/>
+            </mesh>
+
+            <sets>
+            </sets>
+
+
+            <material>
+                <region id="liverMaterial" indices="${bodyToIndexGroup}">
+                    <linearElasticMaterial youngModulus="1000" poissonRatio="0.40"/>
+                    <mass name="abc" massDensity="1"/>
+                </region>
+            </material>
+
+
+            <constraints>
+                <constraint>
+                   <shapeMatchingConstraint id="shapeConstraint" referenceMesh="${msml_mesh_shape}" charge="${chargeNum}" adaptCharge="1" samplingDistance="2" adaptSamplingDistance="0" adaptActiveTriangles="1" />
+<!--                    <fixedConstraint id="bodyConstraint" indices="${bottomToIndexGroup}"/> -->
+                </constraint>
+
+            </constraints>
+
+            <output>
+                <displacement id="disp" timestep="1"/>
+            </output>
+        </object>
+    </scene>
+
+    <workflow>
+               <ComputeIndicesFromBoxROI id="bodyToIndexGroup" box="-120 -310 -1460 80 -147 -1270" mesh="${vol_mesh}"
+                               select="points"/>
+<!--                                select="elements"/> -->
+<!--                <ComputeIndicesFromBoxROI id="bottomToIndexGroup" box="27.1 81.5 -599 99 208.1 -484" mesh="${vol_mesh}"
+                               select="points"/>-->
+
+    <!--
+                <ComputeMeanError id="meanError" initialMesh="${vol_mesh}" referenceMesh="${msml_mesh_shape_ref}" testMesh="${disp}" />
+                <CompareMeshes id="compMesh" referenceMesh="${msml_mesh_shape_ref}" testMesh="${disp}" surfaceOnly="false" />
+                <CompareMeshes id="compMeshDisp" referenceMesh="${msml_mesh_shape_ref}" testMesh="${vol_mesh}" surfaceOnly="false" />
+    -->
+    </workflow>
+
+
+    <environment>
+        <solver linearSolver="direct" processingUnit="CPUDouble"
+                timeIntegration="NewmarkShapeMatching" mass="full"/>
+        <simulation>
+            <step name="initial" dt="0.5" iterations="200" gravity="0 0 0"/>
+        </simulation>
+    </environment>
+
+</msml:msml>
