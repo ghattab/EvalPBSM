@@ -47,3 +47,6 @@ Example run: `./EvaluateGrids path-to-deformed-ground-truth-voxelized-vtk-file p
 Both executables are reported in the source folder `src`.
 All results are reported in the `res` folder in each setting (either _in silico_ or phantom experiment).
 
+## Paper
+If you adapt, remix, transform, or build upon the material, please cite the published paper: 
+Hattab, G., Riediger, C., Weitz, J. et al. A case study: impact of target surface mesh size and mesh quality on volume-to-surface registration performance in hepatic soft tissue navigation. Int J CARS (2020). [doi.org/10.1007/s11548-020-02123-0](https://doi.org/10.1007/s11548-020-02123-0)
